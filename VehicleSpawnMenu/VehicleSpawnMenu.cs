@@ -60,7 +60,11 @@ namespace VehicleSpawnMenu
 
         public void populateMenus(string categoriesJsonString)
         {
-            mainMenu = new UIMenu("Vehicles", "");
+            mainMenu = new UIMenu("Vehicles", "")
+            {
+                ScaleWithSafezone = false
+            };
+            mainMenu.SetMenuWidthOffset(50);
             _menuPool.CloseAllMenus();
             _menuPool = new MenuPool();
             PopulatedMenus.Clear();
